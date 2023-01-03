@@ -1,0 +1,328 @@
+
+.more {
+   display: block;
+   color: #003d6c;
+   text-align: center;
+   margin: 30px 0;
+}
+.more:hover {
+   text-decoration: underline;
+}
+#hsl-main {
+   position: relative;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+
+#hsl-main .title {
+   margin-bottom: 30px;
+   color: #003d6c;
+   font-size: 2em;
+   text-align: center;
+}
+
+/* 메인배너 */
+
+.main-banner-container {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+.main-banner-wrap { /* 스크린 */
+   /* position: relative; */
+   width: 100%;
+   height: calc(100vh - 180px);
+   background-color: #ccc;
+   overflow: hidden;
+}
+
+.main-banner-wrap { /*표시되는 슬라이드 3개*/
+   width: 100%;
+}
+.main-banner-text {
+   position: absolute;
+   top: 36%;
+   left: 10%;
+   width: 70%;
+   word-break: keep-all;
+   font-size: 2em;
+   line-height: 1.4;
+   color: #fff;
+}
+.main-banner-text p:last-of-type {
+   font-size: 0.5em;
+}
+
+.main-banner { /* 5개짜리 전체 리스트 */
+   position: absolute;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   width: 300%;
+   height: 100%;
+   transition: transform 0.5s 0.2s;
+   /* transition-property: left;
+   transition-duration: 0.5s;
+   transition-delay: 0.2s; */
+}
+.mb-slide { /* 개별 슬라이드 */
+   float: left;
+   width: calc(100% /3);
+   height: 100%;
+   background-position: center center;
+   background-size: cover;
+}
+.main-banner-slide1 {background-image: url('../images/main-banner01.jpg');}
+.main-banner-slide2 {background-image: url('../images/main-banner02.jpg');}
+.main-banner-slide3 {background-image: url('../images/main-banner03.jpg');}
+
+.mb-slide:before {
+   content: '';
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.65);
+}
+.main-banner-pagination {
+   height: 90px;
+   padding: 24px 0;
+   text-align: center;
+   line-height: 0;
+}
+.mb-btn {
+   display: inline-block;
+   width: 40px;
+   height: 20px;
+   margin: 0 5px;
+   border: none;
+   background-color: transparent;
+   font-size: 0;
+   line-height: 0;
+   text-indent: -9999em;
+   overflow: hidden;
+}
+.mb-btn:after {
+   display: block;
+   height: 5px;
+   margin-top: -4px;
+   background-color: #003d6c;
+   content: '';
+   opacity: 0.2;
+   transition: 0.3s;
+   border-radius: 2px;
+}
+.mb-btn:hover:after {
+   opacity: 0.7;
+}
+.mb-btn.active:after {
+   position: relative;
+   top: -2px;
+   height: 7px;
+   opacity: 1;
+   border-radius: 3.5px;
+}
+
+.main-banner-controls {
+   position: absolute;
+   left: 15%;
+   top: 50%;
+   width: 100px;
+   height: 60px;
+   margin-top: 150px;
+}
+.mb-control {
+   top: 50%;
+   width: 24px;
+   height: 24px;
+   border: 2px solid #fff;
+   border-width: 0 0 2px 2px;
+   background-color: transparent;
+   text-indent: -9999em;
+   overflow: hidden;
+   opacity: 0.5;
+   transition: 0.3s;
+}
+.mb-control:hover {
+   opacity: 1;
+}
+/* 이전버튼 < */
+.mb-prev {
+   position: absolute;
+   left: 10px;
+   transform: rotate(45deg);
+}
+/* 다음버튼 > */
+.mb-next {
+   position: absolute;
+   right: 10px;
+   transform: rotate(-135deg);
+}
+/* 사업안내 */
+
+.hsl-business {
+   position: relative;
+}
+
+.business-intro-wrap {
+   display: flex;
+   justify-content: center;
+}
+
+.business-introBox {
+   position: relative;
+   width: 100%;
+   background-color: #000;
+}
+ .business-introBox::before{
+   /* display: block;
+   content: ''; */
+} 
+.business-introBox>a>div {}
+
+.business-introBox>a>div>img {
+   width: 100%;
+   opacity: 0.3;
+}
+
+.business-txtBox {
+   position: absolute;
+   width: 100%;
+   text-align: center;
+   transform: translateX(-50%);
+   word-break: keep-all;
+   padding: 0 20px;
+}
+
+.business-txtBox > h3, p{
+   color: #fff;
+}
+.hsl-business::after {
+   position: relative;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: #207cca;
+}
+/* 고객사 */
+.hsl-customers {
+   position: relative;
+}
+
+.customers-img-wrap {
+   display: flex;
+   height: 80px;
+   gap: 30px;
+   justify-content: center;
+
+}
+.customers-imgBox1 {
+   background: url('../images/customer/customer1.png') center center / contain no-repeat;
+   width: calc(100% / 8);
+   height: 100%;
+   box-sizing: border-box;
+}
+
+.customers-imgBox2 {
+   background: url('../images/customer/customer2.jpg') center center / contain no-repeat;
+   width: calc(100% / 8);
+   height: 100%;
+   box-sizing: border-box;
+}
+
+.customers-imgBox3 {
+   background: url('../images/customer/customer3.png') center center / contain no-repeat;
+   width: calc(100% / 8);
+   height: 100%;
+   box-sizing: border-box;
+}
+
+.customers-imgBox4 {
+   background: url('../images/customer/customer4.png') center center / contain no-repeat;
+   width: calc(100% / 8);
+   height: 100%;
+   box-sizing: border-box;
+}
+
+.customers-imgBox5 {
+   background: url('../images/customer/customer5.png') center center / contain no-repeat;
+   width: calc(100% / 8);
+   height: 100%;
+   box-sizing: border-box;
+}
+
+.customers-imgBox6 {
+   background: url('../images/customer/customer6.jpg') center center / contain no-repeat;
+   width: calc(100% / 8);
+   height: 100%;
+   box-sizing: border-box;
+}
+
+
+/* 공지사항 */
+
+.hsl-notice {
+   /* position:relative;
+   top: 100px;
+   margin: 0 90px;
+   margin-top: 100px; */
+}
+
+.notice-box {
+   position: relative;
+   padding: 20px 30px;
+   box-sizing: border-box;
+   border: 1px solid #ddd;
+   border-radius: 10px
+}
+.notice-wrap {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: space-between;
+}
+.notice-box > * {
+   color: #999;
+   text-align: justify;
+   word-break: keep-all;
+}
+
+.notice-box:after {
+   position: absolute;
+   left: 0;
+   top: 0;
+   content: '';
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   border-radius: 10px;
+   transition: opacity 0.3s;
+   background: #2989d8;
+   background: -moz-linear-gradient(-45deg, #2989d8 40%, #207cca 31%, #7db9e8 100%);
+   background: -webkit-linear-gradient(-45deg, #2989d8 40%, #207cca 31%, #7db9e8 100%);
+   background: linear-gradient(135deg, #2989d8 40%, #207cca 31%, #7db9e8 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#7db9e8', GradientType=1);
+
+}
+
+.notice-box:hover:after {
+   opacity: 0.4;
+}
+.notice-box h4 {
+   font-size: 1.6em;
+   text-align: left;
+   word-wrap: break-word;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   margin-bottom: 20px;
+   font-weight: 400;
+   color: #000;
+   line-height: 1.3;
+}
+
+.notice-date { 
+   font-weight: 500;
+   margin-top: 5px;
+}

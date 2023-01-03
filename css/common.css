@@ -1,0 +1,239 @@
+@charset 'UTF-8';
+@import url('reset.css');
+@import url('fonts.css');
+
+/* 스킵 */
+#skip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    outline: 1px;
+}
+
+#skip a {
+    position: absolute;
+    left: 0;
+    top: -44px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: #003d6c;
+    line-height: 44px;
+    text-align: center;
+    transition-property: top;
+    transition-duration: 0.3s;
+}
+
+#skip a:focus,
+#skip a:active {
+    top: 0;
+}
+
+
+/* 헤더 */
+#hsl-hd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#hsl-hd a {
+    color: #fff;
+}
+
+.hsl-hd-wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* transition: 0.2s;background-color: rgba(255,255,255,0.4); */
+}
+
+/* .inner {background-color: #333;} */
+.logo {
+    position: absolute;
+    left: 2%;
+    top: 20px;
+    width: 240px;
+    height: 34px;
+    /*너비 대비 14%*/
+    background: url('../images/logo_wh.png') center no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.m-gnb-open {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: url('../images/mobile/m_menu.svg') center;
+    background-repeat: no-repeat;
+}
+
+.m-gnb-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: url('../images/mobile/xmark-solid.svg') center;
+    background-repeat: no-repeat;
+    z-index: 4000;
+}
+
+#hsl-gnb a {
+    display: block;
+}
+
+/* 유틸메뉴 */
+.m-util-menu {
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.m-util-menu>li:nth-child(4) {
+    display: none;
+}
+
+/* 푸터 */
+
+#hsl-footer {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    background-color: #555;
+    color: #fff;
+    font-weight: 100;
+    margin: 0 auto;
+}
+
+#hsl-footer>.inner {
+    text-align: center;
+}
+
+.ft-logo {
+    width: 327px;
+    margin: 0 auto;
+    background: url('../images/logo_wh.png');
+}
+
+#hsl-footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+.ft-top {
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.ft-top a {
+    color: #fff;
+    padding: 0 15px;
+    line-height: 1;
+    border-right: 1px solid #fff;
+}
+
+.ft-top>li:last-child>a {
+    border-right: none;
+}
+
+.ft-mid {
+    width: 100%;
+}
+
+.ft-mid li {
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+    line-height: 1;
+}
+
+.ft-mid li:last-child {
+    border-right: none;
+}
+
+.ft-bot {
+    position: relative;
+    margin: 15px 0;
+}
+
+.ft-bot li {
+    padding: 0 10px;
+}
+
+.hsl-copyright {}
+
+
+/* 스크롤시 헤더고정 */
+#hsl-hd.fixed {
+    position: fixed;
+    animation: hd-ani 0.3s ease;
+    background: #003d6c;
+    /* background: -moz-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            background: -webkit-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            background: linear-gradient(135deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e72d8', endColorstr='#176ed8',GradientType=1 ); */
+}
+
+@keyframes hd-ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ani-top {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.btn-circle {
+    display: block;
+    position: fixed;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    font-size: 1.1em;
+    line-height: 40px;
+    text-align: center;
+    background-color: #003d6c;
+    background-image: url('../images/arrow-up-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    transition: 0.1s;
+}
+.btn-circle:hover {
+    line-height: 36px;
+    background-color: rgba(0, 61, 108,0.8);
+}
+.btn-top {
+    bottom: 120px;
+}
+.btn-end {
+    bottom: 60px;
+    transform: rotate(180deg);
+}

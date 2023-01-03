@@ -1,0 +1,390 @@
+@charset 'UTF-8';
+
+/* 1. 모바일까지 */
+@media screen and (max-width: 767px) {
+    #hsl-hd {}
+
+    .hsl-hd-wrap {
+        height: 75px;
+    }
+
+    .logo {}
+
+    .inner {
+        width: 100vw;
+        height: 100%;
+    }
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    .modal.active {
+        display: block;
+    }
+
+    #hsl-gnb {
+        position: relative;
+        top: 0;
+        right: -100%;
+        width: 90%;
+        height: 100vh;
+        background: #0E57A6;
+        transition: right 0.3s;
+        z-index: 3331;
+    }
+
+    #hsl-gnb.active {
+        right: -10%;
+        /* background: #1e72d8;
+        background: -moz-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+        background: -webkit-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+        background: linear-gradient(135deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e72d8', endColorstr='#176ed8',GradientType=1 ); */
+    }
+
+    .hsl-gnb-wrap {
+        position: relative;
+        top: 75px;
+        width: 100%;
+        padding: 0 8%;
+
+    }
+
+    .m-gnb-open {
+        display: block;
+        z-index: 100;
+    }
+
+    .m-gnb-close {
+        display: block;
+    }
+
+    .depth1 {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .depth1>a {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        font-size: 1.2em;
+        line-height: 3;
+    }
+
+    .depth1>a:after {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        width: 30px;
+        height: 25px;
+        background-image: url('../images/mobile/caret-down-solid.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 40%;
+        content: '';
+        opacity: 0.5;
+    }
+
+    .depth1>a.show:after {
+        transform: rotate(180deg);
+    }
+
+    .depth2 {
+        position: relative;
+        display: none;
+        padding-left: 30px;
+        padding-bottom: 40px;
+        font-size: 0.8em;
+        opacity: 0;
+        transition: opacity 0.3s 0.3s;
+    }
+
+    .depth2::before {
+        position: absolute;
+        width: 2px;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
+        content: '';
+    }
+
+    .depth2>li>a {
+        font-weight: 400;
+        font-size: 1.25em;
+        line-height: 2em;
+    }
+
+    .depth2>li>a:before {
+        content: '-';
+        margin-right: 6px;
+        opacity: 0.3;
+    }
+
+    .util-menu {
+        display: none;
+    }
+
+    #hsl-footer {
+        position: relative;
+        width: 100%;
+        padding: 40px;
+        background-color: #555;
+        color: #fff;
+        font-weight: 100;
+        margin: 0 auto;
+    }
+
+    #hsl-footer a {
+        display: block;
+        padding: 7px;
+    }
+
+    #hsl-footer>.inner {
+        text-align: center;
+    }
+
+    .ft-logo {
+        width: 90%;
+        height: 50px;
+        background: url('../images/logo_wh.png') no-repeat;
+        background-size: contain;
+    }
+
+    #hsl-footer ul {
+        flex-wrap: wrap;
+    }
+
+    .ft-top a {
+        border: none;
+    }
+
+    .ft-top>li:last-child>a {
+        border-right: none;
+    }
+
+    .ft-mid {
+        width: 100%;
+    }
+
+    .ft-mid li {
+        margin: 5px;
+        border: none;
+    }
+}
+
+/* 2. 태블릿부터 */
+@media screen and (min-width: 768px) {
+    #hsl-hd {
+        /* width: 100%; */
+    }
+
+    .hsl-hd-wrap {
+        /* width: 100%; */
+    }
+
+    #hsl-hd.active .hsl-hd-wrap {
+        /* background: right #1e72d8;
+            background: -moz-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            background: -webkit-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            background: linear-gradient(135deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e72d8', endColorstr='#176ed8',GradientType=1 ); */
+    }
+
+
+    /* gnb제어 */
+
+    .logo {
+        position: static;
+        width: 327px;
+        height: 75px;
+        margin: auto;
+        background-size: contain;
+        background-color: transparent;
+        color: #000;
+        transition: all 0.5s;
+    }
+
+    /* GNB */
+
+    .hsl-gnb-wrap {
+
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        transition: 0.2s;
+        /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
+    }
+
+    #hsl-hd.active .hsl-gnb-wrap {
+        /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
+    }
+
+    #hsl-gnb {
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0);
+        border-width: 1px 0;
+        z-index: 1000;
+        transition: 0.3s;
+
+    }
+
+    #hsl-hd.active #hsl-gnb {
+        border-color: rgba(255, 255, 255, 0.15);
+        /* background: right #1e72d8;
+            background: -moz-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            background: -webkit-linear-gradient(-45deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            background: linear-gradient(135deg,  #1e72d8 40%,#0d69db 50%,#0c51a9 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e72d8', endColorstr='#176ed8',GradientType=1 ); */
+    }
+
+    #hsl-hd.active #hsl-gnb {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #hsl-hd.active #hsl-gnb:after {
+        position: absolute;
+        left: 0;
+        top: 49px;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0.15;
+        content: '';
+    }
+
+    #hsl-hd.active .hsl-gnb-wrap {}
+
+    .depth1 {
+        position: relative;
+        width: 20%;
+        height: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0);
+        text-align: center;
+        display: block;
+        line-height: 2.5;
+    }
+
+    #hsl-hd .depth1:nth-last-child(1) {
+        border-right: 1px solid rgba(255, 255, 255, 0);
+    }
+
+    #hsl-hd.active .depth1 {
+        transition: 0.3s;
+        border-left-color: rgba(255, 255, 255, 0.15);
+    }
+
+    #hsl-hd.active .depth1:nth-last-child(1) {
+        border-right-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .depth1.active .depth2 {
+        background-color: #fff;
+    }
+
+    #hsl-hd .depth1.active .depth2 a {
+        color: #003d6c;
+    }
+
+    .depth1>a {
+        position: relative;
+        font-size: 1.25em;
+    }
+
+    .depth2 {
+        padding: 7.5px 0 0 0;
+        height: 0;
+        line-height: 1.5;
+        overflow: hidden;
+        transition: 0.4s;
+        opacity: 0;
+    }
+
+    #hsl-hd.active .depth2 {
+        height: 317px;
+        opacity: 1;
+    }
+
+    .depth2>li>a:hover {
+        font-weight: 600;
+        text-decoration: 1.5px underline;
+        text-decoration-color: #003d6c;
+        text-underline-offset: 4px;
+        transform: 0.2s;
+    }
+
+    .depth2>li>a {
+        font-size: 1em;
+        line-height: 2;
+    }
+
+    .util-menu {
+        display: none;
+    }
+
+    .util-menu>li>a:hover {
+        text-decoration: underline;
+    }
+
+    .hsl-footer {
+        position: relative;
+        top: 100%;
+    }
+
+    .m-util-menu {
+        display: none;
+    }
+
+    .ft-logo {
+        height: 50px;
+        background: url('../images/logo_wh.png');
+        background-repeat: no-repeat;
+    }
+
+
+
+}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .util-menu {
+        position: absolute;
+        top: 0.5em;
+        right: 0;
+    }
+}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {
+    .depth1 {
+        width: 15%;
+        transition: 0.3s;
+    }
+
+    #hsl-hd.active .depth1 {
+        width: 20%;
+    }
+
+    .util-menu {
+        position: absolute;
+        left: calc(50% + 400px);
+        top: 24px;
+        display: flex;
+        gap: 1.2em;
+        width: 100%;
+        font-size: 0.9em;
+        font-weight: 300;
+    }
+
+
+
+
+}
+
+/* PC 1400px~  */
+@media screen and (min-width:1400px) {}

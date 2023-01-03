@@ -1,0 +1,416 @@
+@charset 'UTF-8';
+#hsl-sub-hd {
+    position: relative;
+}
+.sub-hd-bg {
+    height: 445px;
+    background: url('../images/sub/sub-main-visual01.jpg') center / cover no-repeat;
+}
+.sub-hd-wrap {
+    height: 445px;
+    background: #000;
+    opacity: 0.3;
+}
+.sub-hd-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2.75em;
+}
+
+
+/* lnb */
+#hsl-lnb {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #e2e2e2;
+    box-sizing: content-box;
+    background-color: #fff;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+#hsl-lnb.fixed {
+    position: fixed;
+    animation: hd-ani ease-in-out;
+    background: #003d6c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+#hsl-lnb.fixed a {
+    color: #fff;
+}
+#hsl-lnb.fixed .home{
+    border-color: rgba(255, 255, 255, 0.4);
+}
+#hsl-lnb.fixed .home>a {
+    background: url('../images/mobile/iconmonstr-home-9.svg') center center no-repeat;
+}
+
+#hsl-lnb.fixed .lnb-depth1::before,
+#hsl-lnb.fixed .lnb-depth1::after,
+#hsl-lnb.fixed .lnb-depth2::before,
+#hsl-lnb.fixed .lnb-depth2::after {
+    border-color:rgba(255, 255, 255, 0.4);
+}
+#hsl-lnb.fixed .lnb-depth-list1,
+#hsl-lnb.fixed .lnb-depth-list2 {
+    background: #003d6c;
+    border-color:  rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+#hsl-lnb.fixed .lnb-depth-list1.on,
+#hsl-lnb.fixed .lnb-depth-list2.on{
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+#hsl-lnb.fixed .lnb-depth-list1::before,
+#hsl-lnb.fixed .lnb-depth-list2::before{
+    border-color: rgba(255, 255, 255, 0.4);
+}
+#hsl-lnb.fixed .lnb-btn {
+    background: url('../images/mobile/caret-down-solid.svg') center center no-repeat;
+    background-size: 40%;
+}
+#hsl-lnb a {
+    color: #003d6c;
+}
+
+.lnb-wrap {
+    position: absolute;
+    width: 1000px;
+    height: 48px;
+}
+
+.home {
+    position: relative;
+    left: 0;
+    float: left;
+    width: 65px;
+    height: 48px;
+    text-align: center;
+    border-left: 1px solid #e2e2e2;
+}
+
+.home>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/mobile/iconmonstr-home-9-navy.svg') center center no-repeat;
+}
+
+.lnb-depth1,
+.lnb-depth2 {
+    position: relative;
+    float: left;
+    width: 300px;
+    line-height: 48px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.lnb-depth2 {
+    left: -1px;
+}
+.lnb-depth1>a,
+.lnb-depth2>a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-right: 30px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.lnb-depth-list1,
+.lnb-depth-list2 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    line-height: 3;
+    border-color: #e2e2e2;
+    background: #e2e2e2;
+    transition: 0.3s;
+    border-right: 1px solid #e2e2e2;
+}
+
+.lnb-depth-list1 a,
+.lnb-depth-list2 a {
+    display: block;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.lnb-depth-list1.on {
+    opacity: 1;
+    height: 100%;
+}
+.lnb-depth-list2.on {
+    opacity: 1;
+    height: 100%;
+}
+
+.lnb-depth1:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 48px;
+    top: 0;
+    border-left: 1px solid #e2e2e2;
+}
+.lnb-depth1:after {
+    border-right: 1px solid #e2e2e2;
+    content: '';
+    display: block;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.lnb-depth2::before {
+    height: 48px;
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+}
+.lnb-depth2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    height: 48px;
+    border-right: 1px solid #e2e2e2;
+}
+.lnb-depth-list1::before {
+    position: absolute;
+    top: 0;
+    display: block;
+    border-right: 1px solid #e2e2e2;
+    content: '';
+    height: 100%;
+}
+.lnb-depth-list2::before {
+    border-right: 1px solid #e2e2e2;
+    position: absolute;
+    height: 100%;
+    content: '';
+    display: block;
+}
+
+
+.lnb-btn{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../images/mobile/caret-down-solid-navy.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40%;
+    content: '';
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.lnb-depth1.on .lnb-btn,
+.lnb-depth2.on .lnb-btn {
+    transform: rotate(180deg);
+}
+
+/* 서브메인영역 시작 */
+#hsl-intro-main {
+    position:relative;
+}
+
+.inner {
+    padding: 50px 0;
+}
+
+.inner h3 {
+    text-align: center;
+    font-size: 2.75em;
+    font-weight: normal;
+    color: #003d6c;
+    padding: 0 0 40px;
+}
+.intro-top {
+    display: flex;
+    
+    height: 700px;
+    background: url('../images/abbe-sublett-nxZDMUQhN4o-unsplash.jpg') center /cover no-repeat;
+}
+
+.intro-top::before {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    content: '';
+    display: block;
+    background: #000;
+    opacity: 0.5;
+}
+.intro-top .title {
+    position: absolute;
+    top: 25%;
+    left: 50%; 
+    word-break: keep-all;   
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    color: #fff;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+.intro-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;   
+    flex-wrap: wrap;
+    width: 70%;
+    height: 25%;
+    color: #fff;
+    background-color: rgb(2, 46, 69,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transform: translateX(-50%);
+}
+
+.intro-box > div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    word-break: keep-all;
+    border-left: 1px solid #fff;
+}
+.intro1,.intro2,.intro3,.intro4,.intro5 {
+    height: 100%;
+}
+.intro-box > div:first-child {
+    border: 0;
+}
+.intro-icon1{
+    width: 100%;
+    height: 50px;
+    background: url('../images/sub/company.svg') center no-repeat;
+    background-size: 20%;
+}
+.intro-icon2{
+    width: 100%;
+    height: 50px;
+    background: url('../images/sub/iconmonstr-location-1.svg') center no-repeat;
+    background-size: 15%;
+
+}
+.intro-icon3{
+    width: 100%;
+    height: 50px;
+    background: url('../images/sub/people.svg') center no-repeat;
+    background-size: 20%;
+}
+.intro-icon4{
+    width: 100%;
+    height: 50px;
+    background: url('../images/sub/business.svg') center no-repeat;
+    background-size: 20%;
+}
+.intro-icon5{
+    width: 100%;
+    height: 50px;
+    background: url('../images/sub/globe.svg') center no-repeat;
+    background-size: 15%;
+}
+.intro-mid{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    padding: 60px 0;
+    border-bottom: 1px solid #e2e2e2;
+
+}
+/* 1. 모바일까지 */
+@media screen and (max-width: 767px) {
+    .sub-hd-bg {
+        height: 300px;
+    }
+    .sub-hd-wrap {
+        height: 300px;
+    }
+    .sub-hd-title {
+        top: 40%;
+        font-size: 2.5em;
+    }
+    #hsl-lnb {
+        width: 100%;
+    }
+
+    .lnb-wrap{
+        width: 100%;
+    }
+    .home {
+        display: none;
+    }
+    .lnb-wrap{
+        min-width: 330px;
+    }
+    .lnb-depth1,
+    .lnb-depth2 {
+        float: left;
+        width:50%;
+    }
+    .lnb-depth2::after{
+        right: -2px;
+    }
+    .lnb-depth-list2{
+        right: -1px;
+    }
+    .lnb-depth-list2::before {
+    }
+    #hsl-intro-main {
+        width:100%;
+    }
+
+    #hsl-intro-main img {
+        width: 90%;
+    }
+
+    .inner {
+        width: 100%;
+    }
+    
+}
+/* 2. 태블릿부터 */
+@media screen and (min-width: 768px) {
+    #hsl-lnb {
+        min-width: 1050px;
+    }
+}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    #hsl-lnb {
+        width: 100%;
+    }
+}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {}
+
+/* PC 1400px~  */
+@media screen and (min-width:1400px) {}

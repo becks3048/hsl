@@ -1,0 +1,253 @@
+/* 모바일 ~767px */
+@media screen and (max-width:767px) {
+   #hsl-main section {
+      padding: 40px 0;
+   }
+   
+   #hsl-main section:nth-child(2) {
+      padding-top: 10px;
+   }
+   #hsl-main section:last-child {
+      padding: 0 0 20px;
+   }
+   .inner {
+      width:100%;
+   }
+   .main-banner-wrap {
+      /* 스크린 */
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background-color: #fff;
+   }
+   
+   .main-banner {
+      width: 300%;
+   }
+   .mb-slide {
+      background-repeat: no-repeat;
+   }
+   .mb-control {
+      display: none;
+   }
+   .business-txtBox {
+      top: 40%;
+      left: 50%;
+      width: 100%;
+   }
+   .business-txtBox > p {
+      display: none;
+   }
+   .customers-img-wrap {
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+   .customers-imgBox{
+      box-shadow: 0px 2px 5px rgb(0 0 0 / 15%);
+      width: 31%;
+   }
+   .hsl-customers .more {
+      margin-top: 110px;
+   }
+   .notice-wrap {
+      width: 100%;
+      padding: 20px;
+   }
+   .notice-box {
+      flex-wrap: wrap;
+   }
+   .notice-box:after {
+      padding-top: 30%;
+   }
+   .notice-box:nth-child(3){
+      display: none;
+   }
+   .notice-box:nth-child(4){
+      display: none;
+   }
+   .notice-box:nth-child(5){
+      display: none;
+   }
+   .notice-box:nth-child(6){
+      display: none;
+   }
+}
+
+
+/* 태블릿부터 */
+@media screen and (min-width: 768px) {
+   #hsl-main section {
+      padding: 60px 0;
+   }
+   #hsl-main section:last-child {
+      padding-bottom: 60px;
+   }
+   .inner {
+      width: calc(100% - 180px);
+      margin: 0 auto;
+   }
+   .main-banner-wrap {
+      /* 스크린 */
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      min-height: 800px;
+      background-color: #fff;
+   }
+   .main-banner-text {
+      left: 15%;
+      top: 50%;
+      font-size: 2.5em;
+   }
+   .main-banner-text p {
+      margin: 0.15em 0;
+   }
+  .mb-btn {
+      width: 48px;
+      margin: 0 10px;
+  }
+  .main-banner-controls {
+      top: inherit;
+      bottom: 200px;
+  }
+   .main-banner-pagination {
+      position: relative;
+   }
+
+   /* 사업안내 */
+
+   .business-intro-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 50px
+   }
+
+   .business-introBox {
+      position: relative;
+      width: 100%;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+      border-radius:10px;   
+      width: 100%;
+
+   }
+
+   .business-introBox::before {
+      /* display: block;
+   content: ''; */
+   }
+
+   .business-introBox>a>div {}
+
+   .business-introBox>a>div>img {
+      width: 100%;
+      opacity: 0.3;
+      border-radius: 10px; width: 100%;
+
+   }
+
+   .business-introBox>a>div>img:hover {
+      opacity: 0.6;
+      transition: 0.3s;
+   }
+
+   .business-txtBox {
+      position: absolute;
+      width: 80%;
+      text-align: left;
+      transform: translateX(-50%);
+      word-break: keep-all;
+   }
+
+
+   /* 고객사 */
+   .customers-imgBox {
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+   }
+
+   /* 공지사항 */
+
+   .hsl-notice {
+      /* position:relative;
+   top: 100px;
+   margin: 0 90px;
+   margin-top: 100px; */
+   }
+
+   .notice-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+   }
+
+   .notice-box {
+      position: relative;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+   }
+
+   .notice-box>* {
+      color: #111;
+      text-align: justify;
+      word-break: keep-all;
+   }
+
+   
+
+   .notice-box h4 {
+      font-size: 1.7em;
+      text-align: left;
+      word-wrap: break-word;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-weight: 400;
+      line-height: 1.3;
+   }
+
+   .more {
+      left: 95%;
+      font-size: 1.5em;
+   }
+}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+   .business-txtBox {
+      top: 40%;
+      left: 50%;
+   }
+   .business-txtBox > p {
+      display: none;
+   }
+}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {
+   .main-banner-text {
+      top: 60%;
+      font-size: 3.2em;
+   }
+   
+   .business-txtBox {
+      text-align: left;
+      top: 25%;   
+      left: 50%;
+      word-break:keep-all;
+   }
+   .business-txtBox > h3 {
+      font-size: 1.6em;
+   }
+   .notice-box {
+      width: 30%;
+   }
+   .notice-wrap {
+      gap: 20px;
+   }
+   .business-txtBox > p {
+      
+   }
+}
