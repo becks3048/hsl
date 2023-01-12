@@ -1,14 +1,17 @@
 /* 모바일 ~767px */
 @media screen and (max-width:767px) {
    #hsl-main section {
-      padding: 40px 0;
+      padding-top: 30px;
    }
    
    #hsl-main section:nth-child(2) {
       padding-top: 10px;
    }
-   #hsl-main section:last-child {
-      padding: 0 0 20px;
+   .hsl-customers {
+      padding-bottom: 30px ;
+   }
+   .more {
+      margin: 0;
    }
    .inner {
       width:100%;
@@ -17,7 +20,7 @@
       /* 스크린 */
       position: relative;
       width: 100%;
-      height: 80vh;
+      height:60vh;
       background-color: #fff;
    }
    
@@ -27,8 +30,13 @@
    .mb-slide {
       background-repeat: no-repeat;
    }
-   .mb-control {
+   .mb-control {}
+   .mb-btn {
       display: none;
+   }
+   .main-banner-pagination {
+      height: 0;
+      padding: 10px;
    }
    .business-txtBox {
       top: 40%;
@@ -43,15 +51,16 @@
       gap: 10px;
    }
    .customers-imgBox{
-      box-shadow: 0px 2px 5px rgb(0 0 0 / 15%);
       width: 31%;
    }
    .hsl-customers .more {
-      margin-top: 110px;
+   }
+   #hsl-main .hsl-notice {
+      padding: 60px 0;
    }
    .notice-wrap {
       width: 100%;
-      padding: 20px;
+      padding: 0 20px;
    }
    .notice-box {
       flex-wrap: wrap;
@@ -70,6 +79,10 @@
    }
    .notice-box:nth-child(6){
       display: none;
+   }
+   .more-wrap{
+      position: absolute;
+      padding: 10px;
    }
 }
 
@@ -108,14 +121,18 @@
   }
   .main-banner-controls {
       top: inherit;
-      bottom: 200px;
+      left: 25%;
+      bottom: 150px;
+      transform: translateX(-50%);
   }
    .main-banner-pagination {
       position: relative;
    }
 
    /* 사업안내 */
-
+   #hsl-main .hsl-business {
+      padding-bottom: 0;
+   }
    .business-intro-wrap {
       display: flex;
       justify-content: center;
@@ -160,9 +177,7 @@
 
 
    /* 고객사 */
-   .customers-imgBox {
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
-   }
+   .customers-imgBox {}
 
    /* 공지사항 */
 
@@ -208,9 +223,17 @@
       line-height: 1.3;
    }
 
+   .more-wrap {
+      padding-top: 20px;
+   }
    .more {
-      left: 95%;
-      font-size: 1.5em;
+      font-size: 14px;
+   }
+   .more:hover {
+   }
+   .main-banner-pagination {
+      height: 0;
+      padding: 10px;
    }
 }
 
@@ -246,6 +269,7 @@
    }
    .notice-wrap {
       gap: 20px;
+      justify-content: center;
    }
    .business-txtBox > p {
       

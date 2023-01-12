@@ -69,6 +69,10 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     border-color: rgba(255, 255, 255, 0.4);
 }
+#hsl-lnb.fixed .lnb-depth-list1.on a:hover,
+#hsl-lnb.fixed .lnb-depth-list2.on a:hover {
+    background-color: #005596;
+}
 #hsl-lnb.fixed .lnb-depth-list1::before,
 #hsl-lnb.fixed .lnb-depth-list2::before{
     border-color: rgba(255, 255, 255, 0.4);
@@ -104,6 +108,8 @@
     background: url('../images/mobile/iconmonstr-home-9-navy.svg') center center no-repeat;
 }
 
+
+/* lnb */
 .lnb-depth1,
 .lnb-depth2 {
     position: relative;
@@ -145,26 +151,30 @@
     display: block;
     text-align: left;
     padding-left: 50px;
+    transition: 0.3s;
 }
 
-.lnb-depth-list1.on {
+.lnb-depth-list1.on,.lnb-depth-list2.on {
     opacity: 1;
     height: 100%;
 }
-.lnb-depth-list2.on {
-    opacity: 1;
-    height: 100%;
+.lnb-depth-list1 a:hover,
+.lnb-depth-list2 a:hover{
+        background-color: #b9b7b7;
 }
 
-.lnb-depth1:before {
-    content: '';
+
+.lnb-depth1:before, .lnb-depth2::before {
+    height: 48px;
     display: block;
     position: absolute;
-    height: 48px;
+    content: '';
     top: 0;
+}
+.lnb-depth1:before {
     border-left: 1px solid #e2e2e2;
 }
-.lnb-depth1:after {
+.lnb-depth1:after, .lnb-depth2::after {
     border-right: 1px solid #e2e2e2;
     content: '';
     display: block;
@@ -173,31 +183,11 @@
     top: 0;
     right: 0;
 }
-.lnb-depth2::before {
-    height: 48px;
-    display: block;
-    position: absolute;
-    content: '';
-    top: 0;
-}
-.lnb-depth2::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0%;
-    height: 48px;
-    border-right: 1px solid #e2e2e2;
-}
+
 .lnb-depth-list1::before {
-    position: absolute;
     top: 0;
-    display: block;
-    border-right: 1px solid #e2e2e2;
-    content: '';
-    height: 100%;
 }
-.lnb-depth-list2::before {
+.lnb-depth-list1::before, .lnb-depth-list2::before {
     border-right: 1px solid #e2e2e2;
     position: absolute;
     height: 100%;
@@ -226,7 +216,7 @@
     transform: rotate(180deg);
 }
 
-/* 서브메인영역 시작 */
+/* 서브메인영역 */
 #hsl-intro-main {
     position:relative;
 }
@@ -260,14 +250,14 @@
 }
 .intro-top .title {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 50%; 
+    width: 100%;
     word-break: keep-all;   
     text-align: center;
     font-size: 28px;
     font-weight: normal;
     color: #fff;
-    z-index: 1;
     transform: translateX(-50%);
 }
 .intro-box {
@@ -279,7 +269,7 @@
     align-items:center;   
     flex-wrap: wrap;
     width: 70%;
-    height: 25%;
+    height: 35%;
     color: #fff;
     background-color: rgb(2, 46, 69,0.5);
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -291,10 +281,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     text-align: center;
-    padding: 20px 0;
     word-break: keep-all;
+    padding-top: 20px;
     border-left: 1px solid #fff;
 }
 .intro1,.intro2,.intro3,.intro4,.intro5 {
@@ -303,46 +293,102 @@
 .intro-box > div:first-child {
     border: 0;
 }
-.intro-icon1{
+.intro-icon {
     width: 100%;
-    height: 50px;
-    background: url('../images/sub/company.svg') center no-repeat;
-    background-size: 20%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.intro-text{
+    margin: 0;
+}
+.intro-icon1{
+    background: url('../images/sub/company.svg') center / contain no-repeat;
 }
 .intro-icon2{
-    width: 100%;
-    height: 50px;
-    background: url('../images/sub/iconmonstr-location-1.svg') center no-repeat;
-    background-size: 15%;
+    background: url('../images/sub/location.svg') center / contain no-repeat;
 
 }
 .intro-icon3{
-    width: 100%;
-    height: 50px;
-    background: url('../images/sub/people.svg') center no-repeat;
-    background-size: 20%;
+    background: url('../images/sub/people.svg') center / contain no-repeat;
 }
 .intro-icon4{
-    width: 100%;
-    height: 50px;
-    background: url('../images/sub/business.svg') center no-repeat;
-    background-size: 20%;
+    background: url('../images/sub/business.svg') center / contain no-repeat;
 }
 .intro-icon5{
-    width: 100%;
-    height: 50px;
-    background: url('../images/sub/globe.svg') center no-repeat;
-    background-size: 15%;
+    background: url('../images/sub/globe.svg') center / contain no-repeat;
 }
 .intro-mid{
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     text-align: center;
     line-height: 32px;
     font-size: 18px;
     padding: 60px 0;
     border-bottom: 1px solid #e2e2e2;
+    word-break: keep-all;
+}
+.intro-bot {
+    width: 1200px;       
+    margin: 0 auto;
+}
+.bot-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 400;
+    padding-top: 50px;
+}
+.bot-text {
+    margin-bottom: 30px;
+    text-align: right;
+}
+.numct-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.numct-box {
+    width: 30%;
+    display: block;
+    border-top: 1px solid #e2e2e2;
+    padding: 45px 0;
+    margin-right: 45px;
+}
+.numct-box:nth-child(3n) {
+    margin-right: 0;
+}
+.num-title {
+    text-align: center;
+    font-size: 21px;
+}
+.num-icon {
+    height: 60px;
+    margin: 20px 0;
+}
+.num-icon1 {
+    background: url('../images/sub/sales.svg') center center / contain no-repeat;
+}
+.num-icon2 {
+    background: url('../images/sub/factory.svg') center center / contain no-repeat;
+}
+.num-icon3 {
+    background: url('../images/sub/plane.svg') center center / contain no-repeat;
+}
+.num-icon4 {
+    background: url('../images/sub/export.svg') center center / contain no-repeat;
+}
+.num-icon5 {
+    background: url('../images/sub/delivery.svg') center center / contain no-repeat;
+}
+.num-icon6 {
+    background: url('../images/sub/parts.svg') center center / contain no-repeat;
 
+}
+.num {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
 }
 /* 1. 모바일까지 */
 @media screen and (max-width: 767px) {
@@ -359,7 +405,7 @@
     #hsl-lnb {
         width: 100%;
     }
-
+    
     .lnb-wrap{
         width: 100%;
     }
@@ -393,12 +439,84 @@
     .inner {
         width: 100%;
     }
+    .intro-top {
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+    }
+    .intro-top::before{
+        width: 100%;
+        height: 100%;
+        padding: inherit;
+    }
+    .intro-top .title {
+        position: relative;
+        padding: 30px;
+    }
+    .intro-box {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+    .intro-box > div:first-child {
+        border-bottom:inherit;
+    }
+    .intro-box > div:last-child {}
+    .intro-box > div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0;
+        word-break: keep-all;
+        border-bottom:inherit;
+        border-left: 0;
+    }
+    .intro1,.intro2,.intro3,.intro4,.intro5 {
+        height: 100%;
+    }
+    .intro-mid{
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 15px;
+        word-break: keep-all;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .intro-mid > p {
+        font-size: 17px;
+        line-height: 2em;
+    }
+    .intro-bot {
+        width: 100%;    
+    }
+    .bot-title {
+    }
+    .bot-text {
+        margin: 30px;
+        text-align: right;
+    }
+    .numct-wrap {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .numct-box {
+        width: 100%;
+        display: block;
+        border-top: 1px solid #e2e2e2;
+        padding: 45px 0;
+        margin-right: 45px;
+    }
     
 }
 /* 2. 태블릿부터 */
 @media screen and (min-width: 768px) {
     #hsl-lnb {
-        min-width: 1050px;
+        min-width: 1000px;
     }
 }
 
@@ -407,6 +525,26 @@
     #hsl-lnb {
         width: 100%;
     }
+    .intro-mid{
+        width: 100%;
+    }
+    .intro-mid > p {
+        word-break: keep-all;
+    }
+    .intro-bot {
+        width: 100%;    
+    }
+    .numct-box {
+        margin-right: 0;
+    }
+    .num-title {
+        font-size: 18px;
+    }
+        
+    .num {
+        font-size: 30px;
+    }
+        
 }
 
 /* 4. PC부터 */

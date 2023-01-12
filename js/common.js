@@ -1,11 +1,9 @@
-$(document).ready(function () {
+$(window).ready(function () {
     let wW = window.innerWidth;
     let wH = window.innerHeight;
     const body = $("body");
     const hd = $('#hsl-hd');
     let hdH = hd.height();
-    let mbH = $('.main-banner-text').height();
-    let subH = $('.sub-hd-title').height();
     let logo = $('.logo>a');
     let gnb = $('#hsl-gnb');
     const openBtn = $(".m-gnb-open");
@@ -13,7 +11,6 @@ $(document).ready(function () {
     let depth1 = $(".depth1");
     let depth1a = $(".depth1 > a");
     let depth2 = $(".depth2");
-    let depth2a = $(".depth2 > li > a");
 
     let slideSpeed = 400;
 
@@ -74,7 +71,7 @@ $(document).ready(function () {
     })
     //모바일 GNB 작동
     depth1.on({
-        click: (function () {
+        "click": (function () {
             if (body.hasClass("mo")) {
                 $(this).children(depth1a).toggleClass("show");
                 $(this).children(".depth2").stop().slideToggle().css("opacity", "1");
@@ -86,31 +83,18 @@ $(document).ready(function () {
 
     //PC GNB 작동
     //trg(depth1), event(mouseenter), method(fadeIn)
-    hd.on({
-        mouseenter: function () {
-            if (body.hasClass("pc") || body.hasClass("tb")) {
+    $("#hsl-hd, .depth1").on({
+        "mouseenter": function () {
+            if(body.hasClass("pc") || body.hasClass("tb")) {
                 $(this).addClass(("active"));
             }
         },
-        mouseleave: function () {
+        "mouseleave": function () {
             if (body.hasClass("pc") || body.hasClass("tb")) {
                 $(this).removeClass("active");
             }
         }
     });
-    depth1.on({/* depth2 마우스올리면 색상변화 */
-
-        mouseenter: function () {
-            if (body.hasClass("pc") || body.hasClass("tb")) {
-                $(this).addClass("active");
-            }
-        },
-        mouseleave: function () {
-            if (body.hasClass("pc") || body.hasClass("tb")) {
-                $(this).removeClass("active");
-            }
-        }
-    }
-    );
+    
 
 });

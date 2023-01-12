@@ -1,4 +1,4 @@
-$(document).scroll(function () {
+$(window).scroll(function () {
     let wW = window.innerWidth;
     let wH = window.innerHeight;
     const body = $("body");
@@ -6,29 +6,34 @@ $(document).scroll(function () {
     let hdH = hd.height();
     let mbH = $('.main-banner-text').height();
     let subH = $('.sub-hd-title').height();
-    
-   scTop = $(document).scrollTop();
-   if (body.hasClass("pc") || body.hasClass("tb")) {
+    let mainHeight = $(document).outerHeight() - $(window).outerHeight()-$("#hsl-footer").outerHeight();
+    let scBtn = $(".btn-circle").height();
+// console.log(mainHeight);
+
+   scTop = $(window).scrollTop(); 
+   console.log(scTop);
+   
        if (scTop > hdH) {
            hd.addClass("fixed");
-       } else {
+           $(".btn-circle").css("opacity","1")
+            $(".bg,.mask").addClass("slide");
+       } else if (scTop < hdH){
            hd.removeClass("fixed");
+           $(".btn-circle").css("opacity","0")
        }
-   }
-   else {
-       if ((scTop > mbH) || (scTop > subH)) {
-           hd.addClass("fixed");
-       } else {
-           hd.removeClass("fixed");
-       }
-   }
+   if (scTop >= mainHeight ) {
+    $(".btn-circle").css("position","absolute");
+    $(".btn-circle").css("opacity","1");
+    } else if(scTop < mainHeight) {
+        $(".btn-circle").css("position","fixed");
+    }/* 탑버튼 스크롤이벤트 */
 
-   $(".ani-top").each(function () {
-       let offsetTop = $(this).offset().top - wH;
-       if (scTop > offsetTop) {
-           $(this).fadeOut(500);
-       } else {
-           $(this).fadeIn(500);
-       }
-   });
+// //    $(".ani-top").each(function () {
+// //        let offsetTop = $(this).offset().top - wH;
+// //        if (scTop > offsetTop) {
+// //            $(this).fadeOut(500);
+// //        } else {
+// //            $(this).fadeIn(500);
+// //        }
+//    });
 });

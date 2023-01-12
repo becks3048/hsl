@@ -1,30 +1,111 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>(주)한승물류</title>
-<? include_once('head.html'); ?>
-  <link rel="stylesheet" href="/hsl/css/sub_intro.css">
+  <link rel="shortcut icon" href="/himages/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/common_res.css">
+  <link rel="stylesheet" href="css/sub_intro.css">
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/sub.js"></script>  
 </head>
+
 <body id="sub0-0">
   <!-- 스킵메뉴 -->
-<? include_once('header.html'); ?>
+  <!-- 스킵메뉴 -->
+  <div id="skip" class="center">
+    <a href="#hsl-main">본문 바로가기</a>
+    <a href="#hsl-gnb">주 메뉴 바로가기</a>
+    <a href="#hsl-lnb">서브 메뉴 바로가기</a>
+  </div>
+
+  <header id="hsl-hd">
+    <div class="modal"><span class="blind">모달창</span></div> <!-- 헤더 -->
+    <div class="hsl-hd-wrap">
+      <h1 class="logo"><a href="index.html"><span class="blind">(주)한승항만물류산업</span></a></h1>
+      <button class="m-gnb-open">
+        <span class="blind">모바일 메뉴열기 버튼</span>
+      </button>
+      <nav id="hsl-gnb">
+        <button class="m-gnb-close">
+          <span class="blind">모바일 메뉴닫기 버튼</span>
+        </button>
+        <ul class="hsl-gnb-wrap">
+          <li class="depth1">
+            <a href="javascript:;">회사소개</a>
+            <ul class="depth2">
+              <li><a href="sub_intro.html">개요</a></li>
+              <li><a href="#">CEO 인사말</a></li>
+              <li><a href="#">기업이념/경영방침</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">인허가</a></li>
+              <li><a href="#">조직도</a></li>
+              <li><a href="#">핵심역량</a></li>
+              <li><a href="#">비전</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="javascript:;">사업안내</a>
+            <ul class="depth2">
+              <li><a href="#">안전시스템</a></li>
+              <li><a href="#">물류사업</a></li>
+              <li><a href="#">정비사업</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="javascript:;">사업실적</a>
+            <ul class="depth2">
+              <li><a href="#">고객사</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="javascript:;">고객지원</a>
+            <ul class="depth2">
+              <li><a href="/g5/bbs/board.php?bo_table=hsl_notice/">공지사항</a></li>
+              <li><a href="#">고객의 소리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="m-util-menu">
+          <!-- 유틸메뉴는 헤더마지막에 설계 -->
+          <li><a href="index.html"><img src="images/mobile/iconmonstr-home-9.svg" alt="홈으로"><span class="blind">홈으로</span></a>
+          </li>
+          <li><a href="#"><img src="images/mobile/iconmonstr-location-1.svg" alt="오시는 길"><span class="blind">오시는
+                길</span></a></li>
+          <li><a href="/g5/bbs/board.php?bo_table=hsl_notice/"><img src="images/mobile/iconmonstr-delivery-9.svg" alt="고객지원"><span
+                class="blind">고객지원</span></a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </nav>
+      <ul class="util-menu">
+        <!-- 유틸메뉴는 헤더마지막에 설계 -->
+        <li><a href="index.html">홈으로</a></li>
+        <li><a href="#">오시는 길</a></li>
+        <li><a href="/g5/bbs/board.php?bo_table=hsl_notice/">고객지원</a></li>
+        <li><a href="#">사이트맵</a></li>
+      </ul>
+    </div>
+  </header><!-- 헤더종료 -->
   <header id="hsl-sub-hd"><!-- 서브헤더 시작 -->
     <div class="sub-hd-bg">
       <div class="sub-hd-wrap"></div>
       <h2 class="sub-hd-title">회사소개</h2>
       <span class="blind">서브 비주얼 이미지</span>
     </div>
-    <section id="hsl-lnb">
+    <div id="hsl-lnb">
       <nav class="lnb-wrap">
-        <div class="home"><a href="/hsl/"><span class="blind">홈으로</span></a></div>
+        <div class="home"><a href=""><span class="blind">홈으로</span></a></div>
         <div class="lnb-depth1"><!-- lnb영역 -->
           <a href="javascript:">회사소개</a>
           <div class="lnb-btn"></div>
           <div class="lnb-depth-list1">
-            <a href="/hsl/sub_intro.html">회사소개</a>
+            <a href="sub_intro.html">회사소개</a>
             <a href="#">사업안내</a>
             <a href="#">사업실적</a>
             <a href="/g5/bbs/board.php?bo_table=hsl_notice/">고객지원</a>
@@ -34,7 +115,7 @@
           <a href="javascript:">개요</a>
           <div class="lnb-btn"></div>
           <div class="lnb-depth-list2">
-            <a href="/hsl/sub_intro.html">개요</a>
+            <a href="sub_intro.html">개요</a>
             <a href="#">CEO 인사말</a>
             <a href="#">기업이념/경영방침</a>
             <a href="#">연혁</a>
@@ -47,33 +128,104 @@
 
         </div><!-- lnb영역 -->
       </nav>
-    </section>
+    </div>
   </header>
   <main id="hsl-intro-main"> <!-- 메인 -->
     <div class="inner">
       <h3>개요</h3>
       <div class="intro-top">
         <h4 class="title">
-          한승물류는 설립 이후 고객의 가치 창출을 최우선으로 여기며, <br>고객의 Logistics 성공Partner를 지향하고 있습니다.<br>Global Total Logistics Provider</h4>
+          한승물류는 설립 이후 고객의 가치 창출을 최우선으로 여기며, <br>고객의 Logistics 성공Partner를 지향하고 있습니다.<br>Global Total Logistics Provider
+        </h4>
         <div class="intro-box">
-            <div class="intro1">
-              <div class="intro-icon1"></div><p>회사설립<br><br>2003년 12월 8일</p></div>
-            <div class="intro2"><div class="intro-icon2"></div><p>본사 소재지<br><br>부산 남구 신선로 173<br>(부산 남구 감만동 254-54)</p></div>
-            <div class="intro3"><div class="intro-icon3"></div><p>인원 현황<br><br>국내 1,845명 / 해외 1,302명<br>(2022년 12월 기준)</p></div>
-            <div class="intro4"><div class="intro-icon4"></div><p>사업영역<br><br>화물자동차,위탁수송/건물시설관리용역, <br>위생관리용역,도급,장비임대</p></div>
-            <div class="intro5"><div class="intro-icon5"></div><p>거점 현황<br><br>국내 21개 / 해외 10개<br>(2022년 12월 기준)</p></div>
+          <div class="intro1">
+            <div class="intro-icon intro-icon1"></div>
+            <p class="intro-text">회사설립<br><br>2003년 12월 8일</p>
+          </div>
+          <div class="intro2">
+            <div class="intro-icon intro-icon2"></div>
+            <p class="intro-text">본사 소재지<br><br>부산 남구 신선로 173<br>(부산 남구 감만동 254-54)</p>
+          </div>
+          <div class="intro3">
+            <div class="intro-icon intro-icon3"></div>
+            <p class="intro-text">인원 현황<br><br>국내 1,845명 / 해외 1,302명<br>(2022년 12월 기준)</p>
+          </div>
+          <div class="intro4">
+            <div class="intro-icon intro-icon4"></div>
+            <p class="intro-text">사업영역<br><br>화물자동차,위탁수송/건물시설관리용역, <br>위생관리용역,도급,장비임대</p>
+          </div>
+          <div class="intro5">
+            <div class="intro-icon intro-icon5"></div>
+            <p class="intro-text">거점 현황<br><br>국내 21개 / 해외 10개<br>(2022년 12월 기준)</p>
+          </div>
         </div>
       </div>
       <div class="intro-mid">
-       <p>대한민국을 대표하는 글로벌 종합물류유통기업 한승물류는<br>물류 전 과정을 아우르는 전략과 프로세스는 물론 최상의 서비스를 제공하며 고객과 함께 성장하고 있습니다.<br>
-        특히 한승물류는 분야 최고의 전문가들을 통한 경쟁력 확보로 매년 꾸준한 성장세를 이어나가고 있습니다.<br>또한 지속적인 인프라 투자 및 사회책임 활동을 통해 Global Top Tier SCM전문기업으로서 책임과 의무를 다하고 있습니다.</p>
+        <p>대한민국을 대표하는 글로벌 종합물류유통기업 한승물류는 물류 전 과정을 아우르는 전략과 프로세스는 물론 최상의 서비스를 제공하며 고객과 함께 성장하고 있습니다. 특히 한승물류는 분야 최고의 전문가들을 통한 경쟁력 확보로 매년 꾸준한 성장세를 이어나가고 있습니다.</p>
       </div>
       <div class="intro-bot">
         <h4 class="bot-title">숫자로 보는 한승물류</h4>
-      </div>
+        <p class="bot-text">(2022년 12월 31일 기준)</p>
+        <div class="numct-wrap">
+          <div class="numct-box">
+            <div class="num-title">매출규모</div>
+            <div class="num-icon num-icon1"></div>
+            <div class="num">224 억원</div>
+          </div>
+          <div class="numct-box">
+            <div class="num-title">부품 물량부품 공급 공장 수</div>
+            <div class="num-icon num-icon2"></div>
+            <div class="num">11 개</div>
+          </div>
+          <div class="numct-box">
+            <div class="num-title">항공 수출/입 물동량</div>
+            <div class="num-icon num-icon3"></div>
+            <div class="num">13,307 톤</div>
+          </div>
+          <div class="numct-box">
+            <div class="num-title">해상 수출/입 물동량부품 물량</div>
+            <div class="num-icon num-icon4"></div>
+            <div class="num">258,697 TEU</div>
+          </div>
+          <div class="numct-box">
+            <div class="num-title">부품 공급 품목수</div>
+            <div class="num-icon num-icon5"></div>
+            <div class="num">7,254 개</div>
+          </div>
+          <div class="numct-box">
+            <div class="num-title">부품 물량</div>
+            <div class="num-icon num-icon6"></div>
+            <div class="num">25,701 FEU</div>
+          </div>
+        </div>
       </div>
     </div>
+    <a href="#" class="btn-circle btn-top"><span class="blind">위로</span></a>
+
   </main>
-  <? include_once('footer.html'); ?>
+  <footer id="hsl-footer"><!-- 푸터 -->
+    <div class="inner">
+      <div class="ft-logo">
+        <a href="index.html"><span class="blind">(주)한승항만물류산업</span></a>
+      </div>
+      <ul class="ft-top">
+        <li><strong><a href="javascript:;">개인정보처리방침</a></strong></li>
+        <li><strong><a href="javascript:;">이메일무단수집거부</a></strong></li>
+        <li><a href="javascript:;">고객지원</a></li>
+        <li><a href="sub_intro.html">회사소개</a></li>
+      </ul>
+      <ul class="ft-mid">
+        <li>담당자 : 박태호 차장</li>
+        <li>오시는 길 : 부산광역시 남구 신선로 173</li>
+      </ul>
+      <ul class="ft-bot">
+        <li>TEL. 051 - 631 - 8172 </li>
+        <li>FAX. 051-631-8272</li>
+        <li>E-MAIL. PTHKING@HSLS.CO.KR </li>
+      </ul>
+      <div class="hsl-copyright">COPYRIGH 2014.HANSEUNG LOGISTICS.INC.ALL RIGTHS RESERVED. </div>
+    </div>
+  </footer>
 </body>
+
 </html>

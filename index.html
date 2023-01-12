@@ -6,19 +6,93 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>(주)한승물류</title>
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/common_res.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/main_res.css">
-  <script src="js/jquery-3.6.1.min.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/index.js"></script>
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/common_res.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/main_res.css">
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/main_copy.js"></script>
+  <script src="./js/index.js"></script>
 </head>
 
 <body id="main">
-  <? include_once("header.html"); ?>
+  <!-- 스킵메뉴 -->
+  <div id="skip" class="center">
+    <a href="#hsl-main">본문 바로가기</a>
+    <a href="#hsl-gnb">주 메뉴 바로가기</a>
+    <a href="#hsl-lnb">서브 메뉴 바로가기</a>
+  </div>
+
+  <header id="hsl-hd">
+    <div class="modal"><span class="blind">모달창</span></div> <!-- 헤더 -->
+    <div class="hsl-hd-wrap">
+      <h1 class="logo"><a href="index.html"><span class="blind">(주)한승항만물류산업</span></a></h1>
+      <button class="m-gnb-open">
+        <span class="blind">모바일 메뉴열기 버튼</span>
+      </button>
+      <nav id="hsl-gnb">
+        <button class="m-gnb-close">
+          <span class="blind">모바일 메뉴닫기 버튼</span>
+        </button>
+        <ul class="hsl-gnb-wrap">
+          <li class="depth1">
+            <a href="javascript:;">회사소개</a>
+            <ul class="depth2">
+              <li><a href="sub_intro.html">개요</a></li>
+              <li><a href="#">CEO 인사말</a></li>
+              <li><a href="#">기업이념/경영방침</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">인허가</a></li>
+              <li><a href="#">조직도</a></li>
+              <li><a href="#">핵심역량</a></li>
+              <li><a href="#">비전</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="javascript:;">사업안내</a>
+            <ul class="depth2">
+              <li><a href="#">안전시스템</a></li>
+              <li><a href="#">물류사업</a></li>
+              <li><a href="#">정비사업</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="javascript:;">사업실적</a>
+            <ul class="depth2">
+              <li><a href="#">고객사</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="javascript:;">고객지원</a>
+            <ul class="depth2">
+              <li><a href="/g5/bbs/board.php?bo_table=hsl_notice/">공지사항</a></li>
+              <li><a href="#">고객의 소리</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="m-util-menu">
+          <!-- 유틸메뉴는 헤더마지막에 설계 -->
+          <li><a href="/"><img src="./images/mobile/iconmonstr-home-9.svg" alt="홈으로"><span class="blind">홈으로</span></a>
+          </li>
+          <li><a href="#"><img src="./images/mobile/iconmonstr-location-1.svg" alt="오시는 길"><span class="blind">오시는
+                길</span></a></li>
+          <li><a href="/g5/bbs/board.php?bo_table=hsl_notice/"><img src="./images/mobile/iconmonstr-delivery-9.svg" alt="고객지원"><span
+                class="blind">고객지원</span></a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </nav>
+      <ul class="util-menu">
+        <!-- 유틸메뉴는 헤더마지막에 설계 -->
+        <li><a href="/">홈으로</a></li>
+        <li><a href="#">오시는 길</a></li>
+        <li><a href="/g5/bbs/board.php?bo_table=hsl_notice/">고객지원</a></li>
+        <li><a href="#">사이트맵</a></li>
+      </ul>
+    </div>
+  </header><!-- 헤더종료 -->
   <main id="hsl-main"> <!-- 메인 -->
     <section class="main-banner-container pd0"> <!-- 메인배너 -->
       <div class="main-banner-wrap">
@@ -44,14 +118,15 @@
     </section><!-- 메인배너 끝 -->
 
     <section class="hsl-business"> <!-- 사업안내  -->
+      
       <div class="inner">
         <h2 class="title">사업안내</h2>
         <ol class="business-intro-wrap">
 
           <li class="business-introBox">
             <a href="#">
-              <div class="business-imgBox1">
-                <img src="/hsl/images/business1.jpeg" alt="안전시스템">
+              <div class="business-imgBox business-imgBox1">
+                <img src="./images/business1.jpeg" alt="안전시스템">
                 <div class="business-txtBox">
                   <h3>안전시스템</h3>
                   <p>
@@ -60,37 +135,45 @@
                     철두철미하게 안전사고 방지를 위하여
                     노력하고 있습니다. </p>
                 </div>
+                <div class="bg"></div>
+        <div class="mask"></div>
               </div>
             </a>
           </li>
 
           <li class="business-introBox">
             <a href="#">
-              <div class="business-imgBox2">
-                <img src="/hsl/images/business2.jpeg" alt="물류사업">
+              <div class="business-imgBox business-imgBox2">
+                <img src="./images/business2.jpeg" alt="물류사업">
                 <div class="business-txtBox">
                   <h3>물류사업</h3>
                   <p>
                     고객의 물류업무에 대해 포워더로써 경험과 노하우를 살려 유용한 로지스틱스 솔루션을 제안해드립니다.</p>
+                    
                 </div>
-              </div>
+              </div><div class="bg"></div>
+              <div class="mask"></div>
             </a>
           </li>
 
           <li class="business-introBox">
             <a href="#">
-              <div class="business-imgBox3">
-                <img src="/hsl/images/business3.jpg" alt="정비사업">
+              <div class="business-imgBox business-imgBox3">
+                <img src="./images/business3.jpg" alt="정비사업">
                 <div class="business-txtBox">
                   <h3>정비사업</h3>
                   <p>이동정비반을 통해 긴급상황에도 예방 및 출동 정비서비스와 부품 및 소모품을 공급하고있습니다.</p>
                 </div>
+                <div class="bg"></div>
+        <div class="mask"></div>
               </div>
             </a>
           </li>
         </ol>
       </div>
-      <div class="bg"></div>
+      <div class="boxWrap">
+        
+      </div>
     </section> <!-- 사업안내 종료 -->
 
     <section class="hsl-customers"> <!-- 고객사 -->
@@ -104,9 +187,11 @@
           <div class="customers-imgBox customers-imgBox5"></div>
           <div class="customers-imgBox customers-imgBox6"></div>
         </div>
-
+        <div class="more-wrap">
+          <button class="more" href="#"><span>MORE</span></button>
+        </div>
       </div>
-      <a class="more" href="#">MORE</a>
+      
     </section> <!-- 고객사 종료 -->
 
     <section class="hsl-notice"> <!-- 공지사항 -->
@@ -149,13 +234,37 @@
         </div>
       </div>
       <div class="more-wrap">
-        <a class="more" href="#">MORE</a>
+        <button class="more" href="/g5/bbs/board.php?bo_table=hsl_notice/"><span>MORE</span></button>
       </div>
+      <a href="#" class="btn-circle btn-top"><span class="blind">위로</span></a>
+
     </section> <!-- 공지사항 종료 -->
 
   </main>
-  <? include_once("footer.html"); ?>
-  <!-- <input class="setBg-btn" type="button" value="night" onclick="
+  <footer id="hsl-footer"><!-- 푸터 -->
+    <div class="inner">
+      <div class="ft-logo">
+        <a href="index.html"><span class="blind">(주)한승항만물류산업</span></a>
+      </div>
+      <ul class="ft-top">
+        <li><strong><a href="javascript:;">개인정보처리방침</a></strong></li>
+        <li><strong><a href="javascript:;">이메일무단수집거부</a></strong></li>
+        <li><a href="javascript:;">고객지원</a></li>
+        <li><a href="sub_intro.html">회사소개</a></li>
+      </ul>
+      <ul class="ft-mid">
+        <li>담당자 : 박태호 차장</li>
+        <li>오시는 길 : 부산광역시 남구 신선로 173</li>
+      </ul>
+      <ul class="ft-bot">
+        <li>TEL. 051 - 631 - 8172 </li>
+        <li>FAX. 051-631-8272</li>
+        <li>E-MAIL. PTHKING@HSLS.CO.KR </li>
+      </ul>
+      <div class="hsl-copyright">COPYRIGH 2014.HANSEUNG LOGISTICS.INC.ALL RIGTHS RESERVED. </div>
+    </div>
+  </footer><!-- 푸터 종료 -->
+  <!-- <a href="#hsl-footer" class="btn-circle btn-end"><span class="blind">아래로</span></a> -->  <!-- <input class="setBg-btn" type="button" value="night" onclick="
         document.querySelector('body').style.backgroundColor='#999'
         document.querySelector('body').style.color='white'
     "> -->

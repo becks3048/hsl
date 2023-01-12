@@ -1,8 +1,8 @@
 window.onload = function () {
     let lnbBtn1 = document.querySelector(".lnb-depth1");
     let lnbBtn2 = document.querySelector(".lnb-depth2");
-    let d1List = document.querySelector(".lnb-depth-list1")
-    let d2List = document.querySelector(".lnb-depth-list2")
+    let d1List = document.querySelector(".lnb-depth-list1");
+    let d2List = document.querySelector(".lnb-depth-list2");
 
     function lnbToggle1() {
         d1List.classList.toggle('on');
@@ -41,12 +41,17 @@ window.onload = function () {
     function init() {
         lnbPos;
     }
-    $(document).scroll(function () {
-        scTop = $(document).scrollTop(); console.log(scTop)
-        if (scTop > hd.innerHeight()) {
+    $(window).scroll(function () {
+        scTop = $(window).scrollTop(); /* console.log(scTop) */
+        let mainHeight = $(document).outerHeight() - $(window).outerHeight() - $("#hsl-footer").outerHeight();
+        let scBtn = $(".btn-circle").height();
+
+        if (scTop > 0) {
             hd.addClass('fixed');
+            $(".btn-circle").css("opacity","1")
         } else {
             hd.removeClass ('fixed');
+            $(".btn-circle").css("opacity","0");
         }
 
         if (scTop >= lnbPos - lnb.height()) {
@@ -55,6 +60,12 @@ window.onload = function () {
         } else {
             hd.show();
             lnb.removeClass("fixed").css('top','inherit');
+        } /* 탑버튼 스크롤이벤트 */
+        if (scTop >= mainHeight ) {
+            $(".btn-circle").css("position","absolute");
+            $(".btn-circle").css("opacity","1");
+        } else if(scTop < mainHeight) {
+                $(".btn-circle").css("position","fixed");
         }
     });
 }

@@ -119,7 +119,7 @@
 #hsl-footer {
     position: relative;
     width: 100%;
-    padding: 30px;
+    padding: 50px;
     background-color: #555;
     color: #fff;
     font-weight: 100;
@@ -135,7 +135,11 @@
     margin: 0 auto;
     background: url('../images/logo_wh.png');
 }
-
+.ft-logo a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 #hsl-footer ul {
     display: flex;
     justify-content: center;
@@ -208,32 +212,34 @@
     opacity: 0;
     transform: translateY(100%);
 }
-
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay02 {transition-delay: 0.2s;}
+.delay04 {transition-delay: 0.4s;}
+.delay06 {transition-delay: 0.6s;}
+.delay08 {transition-delay: 0.8s;}
+.delay10 {transition-delay: 1.0s;}
 .btn-circle {
-    display: block;
     position: fixed;
     right: 30px;
-    width: 40px;
-    height: 40px;
-    border-radius: 20%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     font-size: 1.1em;
     line-height: 40px;
     text-align: center;
     background-color: #003d6c;
     background-image: url('../images/arrow-up-solid.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: 60%;
-    transition: 0.1s;
+    transition: 0.3s;
+    opacity: 0;
 }
-.btn-circle:hover {
-    line-height: 36px;
-    background-color: rgba(0, 61, 108,0.8);
-}
+
 .btn-top {
-    bottom: 120px;
+    bottom: 50px;
 }
-.btn-end {
-    bottom: 60px;
-    transform: rotate(180deg);
-}
+

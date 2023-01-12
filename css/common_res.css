@@ -131,13 +131,9 @@
     }
 
     #hsl-footer {
-        position: relative;
-        width: 100%;
-        padding: 40px;
-        background-color: #555;
+        display: flex;
         color: #fff;
         font-weight: 100;
-        margin: 0 auto;
     }
 
     #hsl-footer a {
@@ -159,7 +155,7 @@
     #hsl-footer ul {
         flex-wrap: wrap;
     }
-
+    .ft-top {}
     .ft-top a {
         border: none;
     }
@@ -176,12 +172,16 @@
         margin: 5px;
         border: none;
     }
+    .btn-top,.btn-end {
+        right: 20px;
+    }
+        
 }
 
 /* 2. 태블릿부터 */
 @media screen and (min-width: 768px) {
     #hsl-hd {
-        /* width: 100%; */
+        /* width: 100%; */    background-color: rgba(255,255,255,0.2);
     }
 
     .hsl-hd-wrap {
@@ -297,7 +297,7 @@
     }
 
     .depth2 {
-        padding: 7.5px 0 0 0;
+        padding-top: 7.5px;
         height: 0;
         line-height: 1.5;
         overflow: hidden;
@@ -346,7 +346,10 @@
         background-repeat: no-repeat;
     }
 
-
+    .btn-circle:hover {
+        line-height: 40px;
+        background-color: rgba(0, 61, 108,0.6);
+    }
 
 }
 
