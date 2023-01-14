@@ -42,9 +42,10 @@ window.onload = function () {
         lnbPos;
     }
     $(window).scroll(function () {
-        scTop = $(window).scrollTop(); /* console.log(scTop) */
+        scTop = $(window).scrollTop(); 
+        /* console.log(scTop) */
         let mainHeight = $(document).outerHeight() - $(window).outerHeight() - $("#hsl-footer").outerHeight();
-        let scBtn = $(".btn-circle").height();
+        // let scBtn = $(".btn-circle").height();
 
         if (scTop > 0) {
             hd.addClass('fixed');

@@ -15,15 +15,19 @@ $(window).scroll(function () {
    
        if (scTop > hdH) {
            hd.addClass("fixed");
-           $(".btn-circle").css("opacity","1")
+            $(".btn-circle").css("opacity","1")
             $(".bg,.mask").addClass("slide");
+            $(".ani-top").addClass("fade-in");
        } else if (scTop < hdH){
            hd.removeClass("fixed");
-           $(".btn-circle").css("opacity","0")
+            $(".btn-circle").css("opacity","0")
+            $(".bg,.mask").removeClass("slide");
+            $(".ani-top").removeClass("fade-in");
        }
    if (scTop >= mainHeight ) {
     $(".btn-circle").css("position","absolute");
     $(".btn-circle").css("opacity","1");
+    
     } else if(scTop < mainHeight) {
         $(".btn-circle").css("position","fixed");
     }/* 탑버튼 스크롤이벤트 */
