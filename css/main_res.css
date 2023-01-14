@@ -120,7 +120,7 @@
       margin: 0 10px;
   }
   .main-banner-controls {
-      top: inherit;
+      top: 63%;
       left: 25%;
       bottom: 150px;
       transform: translateX(-50%);
