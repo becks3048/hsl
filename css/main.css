@@ -280,6 +280,12 @@
    height: 100%;
    background: #207cca;
 }
+.business-introBox:hover .business-txtBox {
+   opacity: 0;
+}
+#hsl-main > .business-introBox:hover .business-introBox img {
+   opacity: 1;
+}
 /* 고객사 */
 .hsl-customers {
    position: relative;
@@ -289,7 +295,6 @@
    height: 100%;
    gap: 30px;
    justify-content: center;
-
 }
 .customers-imgBox1 {
    background: url('../images/customer/customer1.png') center center / contain no-repeat;
@@ -297,9 +302,8 @@
    height: 80px;
    box-sizing: border-box;
 }
-
 .customers-imgBox2 {
-   background: url('../images/customer/customer2.jpg') center center / contain no-repeat;
+   background: url('../images/customer/customer2.png') center center / contain no-repeat;
    width: calc(100% / 8);
    height: 80px;
    box-sizing: border-box;
@@ -327,7 +331,7 @@
 }
 
 .customers-imgBox6 {
-   background: url('../images/customer/customer6.jpg') center center / contain no-repeat;
+   background: url('../images/customer/customer6.png') center center / contain no-repeat;
    width: calc(100% / 8);
    height: 80px;
    box-sizing: border-box;

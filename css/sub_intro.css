@@ -234,11 +234,9 @@
 }
 .intro-top {
     display: flex;
-    
     height: 700px;
     background: url('../images/abbe-sublett-nxZDMUQhN4o-unsplash.jpg') center /cover no-repeat;
 }
-
 .intro-top::before {
     position: absolute;
     width: 100%;
@@ -419,6 +417,9 @@
     .lnb-depth2 {
         float: left;
         width:50%;
+    }
+    .lnb-depth1:before {
+    border-left: 0;
     }
     .lnb-depth2::after{
         right: -2px;

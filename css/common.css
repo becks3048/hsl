@@ -210,11 +210,12 @@
 
 .ani-top {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateX(-70%);
 }
 .fade-in {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+    transition: 0.5s;
 }
 .delay02 {transition-delay: 0.2s;}
 .delay04 {transition-delay: 0.4s;}
@@ -242,4 +243,3 @@
 .btn-top {
     bottom: 50px;
 }
-
