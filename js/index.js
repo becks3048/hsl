@@ -11,7 +11,6 @@ $(window).scroll(function () {
 // console.log(mainHeight);
 
    scTop = $(window).scrollTop(); 
-   console.log(scTop);
    
     if (scTop > hdH) {
         hd.addClass("fixed");
