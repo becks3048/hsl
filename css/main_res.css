@@ -206,7 +206,6 @@
    .notice-box>* {
       color: #111;
       text-align: justify;
-      word-break: keep-all;
    }
 
    

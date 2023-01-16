@@ -360,7 +360,6 @@
 .notice-box > * {
    color: #444;
    text-align: justify;
-   word-break: keep-all;
    transition: 0.2s;
 }
 
