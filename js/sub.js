@@ -67,6 +67,8 @@ window.onload = function () {
             $(".btn-circle").css("opacity","1");
         } else if(scTop < mainHeight) {
                 $(".btn-circle").css("position","fixed");
+        } else {
+            return 0;
         }
     });
 }
